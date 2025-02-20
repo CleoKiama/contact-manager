@@ -7,9 +7,8 @@ from app.main.forms import ContactForm
 
 @bp.route("/")
 @bp.route("/index")
-@login_required
 def index():
-    return render_template("main/index.html")
+    return render_template("main/index.html", title="Home")
 
 
 @bp.route("/add_contact", methods=["GET", "POST"])

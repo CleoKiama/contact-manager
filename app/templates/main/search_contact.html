@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %}Search Contact{% endblock %} {% block
+content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title mb-0">Search Contact</h4>
+      </div>
+      <div class="card-body">
+        <form method="GET" action="{{ url_for('main.search_contact') }}">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              name="registration_number"
+              class="form-control"
+              placeholder="Enter Registration Number"
+              required
+            />
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+
+        {% if contact %}
+        <div class="mt-4">
+          <h5>Contact Details</h5>
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Registration Number:</strong> {{
+                contact.registration_number }}
+              </li>
+              <li class="list-group-item">
+                <strong>Mobile:</strong> {{ contact.mobile }}
+              </li>
+              <li class="list-group-item">
+                <strong>Email:</strong> {{ contact.email }}
+              </li>
+              <li class="list-group-item">
+                <strong>Address:</strong> {{ contact.address }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        {% elif request.args.get('registration_number') %}
+        <div class="alert alert-info mt-4">
+          No contact found with this registration number.
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
