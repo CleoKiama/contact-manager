@@ -98,21 +98,6 @@ flask-mongo-contact-manager/
 └── README.md               # This file
 ```
 
-## Contributing
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Your Name - [your-email@example.com](mailto:your-email@example.com)
-
-Project Link: [https://github.com/your-username/flask-mongo-contact-manager](https://github.com/your-username/flask-mongo-contact-manager)
-
