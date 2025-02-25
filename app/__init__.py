@@ -1,14 +1,12 @@
 from flask import Flask
 from flask_pymongo import PyMongo
 from flask_login import LoginManager
-from flask_mail import Mail
 from config import Config
 
 mongo = PyMongo()
 login_manager = LoginManager()
 login_manager.login_view = "auth.login"
 login_manager.login_message = "Please log in to access this page."
-mail = Mail()
 
 
 def create_app(config_class=Config):
@@ -17,7 +15,6 @@ def create_app(config_class=Config):
 
     mongo.init_app(app)
     login_manager.init_app(app)
-    mail.init_app(app)
 
     from app.auth import bp as auth_bp
 
