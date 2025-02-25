@@ -9,6 +9,7 @@ Flask==3.1.0
 Flask-Login==0.6.3
 Flask-PyMongo==3.0.1
 Flask-WTF==1.2.1
+gunicorn==21.2.0  # Make sure gunicorn is included
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.5

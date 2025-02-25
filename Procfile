@@ -1,1 +1,1 @@
-web: gunicorn --workers=4 "app:create_app()"
+web: gunicorn wsgi:app
